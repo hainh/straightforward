@@ -294,7 +294,7 @@ export class Straightforward extends EventEmitter {
     } else {
       const urlParts = new URL(req.url)
       req.locals.urlParts = {
-        host: urlParts.host,
+        host: urlParts.hostname,
         port: parseInt(urlParts.port || "80"),
         path: urlParts.pathname + urlParts.search,
       }
